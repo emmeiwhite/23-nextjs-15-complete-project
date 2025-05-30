@@ -1,22 +1,20 @@
 import './globals.css'
-
 import Navbar from '@/components/Navbar'
+import type { Metadata } from 'next'
 
-import { Inter, Roboto } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
-const roboto = Roboto({ subsets: ['latin'], weight: ['400'] })
 
-export const metadata = {
-  title: 'NextJS Foundations',
-  description: 'Master NextJS with TypeScript'
+export const metadata: Metadata = {
+  title: 'The reality of next.js',
+  description: 'A journey into the world of true frontend',
+  keywords: 'Next.JS, Typescript, Tailwindcss'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={roboto.className}>
+    <html lang="en">
       <body className={inter.className}>
         <Navbar />
         <main className="max-w-4xl mx-auto px-5 mt-8">{children}</main>
