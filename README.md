@@ -15,3 +15,6 @@ Client Components can be seen as normal React Components with interactivity, hoo
 ## Routing
 
 Next.JS has file-based routing system
+
+- whatever is kept within the `app folder` is treated as a route.
+- better to keep components folder outside of the `app folder`
