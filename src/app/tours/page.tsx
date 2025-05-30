@@ -1,4 +1,6 @@
-const url = 'https://www.course-api.com/react-tours-'
+import Link from 'next/link'
+
+const url = 'https://www.course-api.com/react-tours-project'
 
 type Tour = {
   id: string
@@ -23,9 +25,19 @@ const ToursPage = async () => {
   console.log(data)
 
   return (
-    <section>
+    <section className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
       {data.map(tour => {
-        return <p key={tour.id}>{tour.name}</p>
+        return (
+          <div
+            key={tour.id}
+            className="p-4 border-1 border-amber-300 rounded ">
+            <Link
+              href={`/tours/${tour.id}`}
+              className="text-green-500 hover:text-green-700 ">
+              {tour.name}
+            </Link>
+          </div>
+        )
       })}
     </section>
   )
