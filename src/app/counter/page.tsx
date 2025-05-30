@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import Counter from '@/components/Counter'
+
 const CounterPage = () => {
-  const [counter, setCounter] = useState(0)
   return (
     <div>
-      <h2>{counter}</h2>
-      <button onClick={() => setCounter(prev => prev + 1)}>increment</button>
+      <h1>The Counter Server Component</h1>
+      <p>Server components can nest the Client Components</p>
+
+      <Counter />
     </div>
   )
 }
